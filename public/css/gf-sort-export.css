@@ -1,0 +1,39 @@
+/**
+ * Gravity Forms Sort Export stylesheet.
+ * @since $ver$
+ */
+ul#export_field_list {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+ul#export_field_list li {
+    background-color: #ebebeb;
+    margin: 0;
+    padding: 7px 10px;
+}
+
+ul#export_field_list li + li {
+    border-top: 1px solid #e1e1e1;
+    background-color: #f2f2f2;
+}
+
+ul#export_field_list li + li label {
+    color: #A6ACB0;
+    display: inline-block;
+}
+
+ul#export_field_list li + li.ui-sortable-helper {
+    cursor: grabbing;
+}
+
+ul#export_field_list li + li.active {
+    background-color: #FFF;
+    cursor: move;
+    cursor: grab;
+}
+
+ul#export_field_list li + li.active label {
+    color: #333;
+}
