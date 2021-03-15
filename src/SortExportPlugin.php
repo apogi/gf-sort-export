@@ -23,7 +23,7 @@ class SortExportPlugin
      */
     private function load_scripts()
     {
-        if (rgget('view') !== 'export_entry') {
+        if (rgget('page') !== 'gf_export' || !in_array(rgget('view'), ['', 'export_entry'])) {
             return;
         }
 
