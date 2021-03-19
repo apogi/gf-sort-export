@@ -3,28 +3,29 @@
  * @since $ver$
  */
 (function ($) {
+    /**
+     * Sorts the list items by moving active items to the top.
+     */
+    function sortItems(list) {
+        var items = $('li', list);
+        items.sort(function (a, b) {
+            // select all always on top.
+            if ($(b).find('#select_all').length > 0) {
+                return 1;
+            }
+
+            a = $(a).hasClass('active');
+            b = $(b).hasClass('active');
+
+            return a === b ? 0 : (a < b ? 1 : -1);
+        });
+        list.append(items);
+        list.sortable('refresh');
+    }
+
     $(function () {
         var $list = $('#export_field_list');
-
-        /**
-         * Sorts the list items by moving active items to the top.
-         */
-        var sortItems = function (list) {
-            var items = $('li', list);
-            items.sort(function (a, b) {
-                // select all always on top.
-                if ($(b).find('#select_all').length > 0) {
-                    return 1;
-                }
-
-                a = $(a).hasClass('active');
-                b = $(b).hasClass('active');
-
-                return a === b ? 0 : (a < b ? 1 : -1);
-            });
-            list.append(items);
-            list.sortable('refresh');
-        };
+        var timeout;
 
         $list
             // Only sort active items, and not the header.
@@ -40,7 +41,11 @@
                 }
                 // Only sort on the original event.
                 if (!is_propagated) {
-                    sortItems($list);
+                    // People are allowed to change their mind.
+                    clearTimeout(timeout);
+                    timeout = setTimeout(function () {
+                        sortItems($list);
+                    }, 1250);
                 }
             });
     });

@@ -11,3 +11,8 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Control the order of the fields during the export of entries.
+
+== Changelog ==
+= Unreleased
+* Feature: Drag & sort the export fields.
+* Feature: Disables all hidden (inactive) subfields from the export page.
