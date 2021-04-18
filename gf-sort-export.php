@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Gravity Forms Sort Export
  * Description:     Control the order of the fields during export
- * Author:          Doeke Norg
+ * Author:          Apogi
  * Author URI:      https://paypal.me/doekenorg
  * Plugin URI:      https://apogi.dev/plugins/gf-sort-export
  * License:         GPL2

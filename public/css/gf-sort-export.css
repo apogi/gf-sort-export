@@ -3,37 +3,64 @@
  * @since $ver$
  */
 ul#export_field_list {
-    border: 1px solid #e1e1e1;
-    border-radius: 5px;
+    border: 1px solid #c3c4c7;
     overflow: hidden;
 }
 
 ul#export_field_list li {
-    background-color: #ebebeb;
+    background-color: #FFF;
     margin: 0;
-    padding: 7px 10px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul#export_field_list li input[type=checkbox] {
+    margin-top: 0;
+}
+
+ul#export_field_list li label {
+    flex: 1;
+    padding: 7px 5px;
+    color: #A6ACB0;
+}
+
+ul#export_field_list li:first-child {
+    border-bottom: 1px solid #c3c4c7;
+}
+
+ul#export_field_list li:first-child label {
+    color: #2c3338;
+}
+
+ul#export_field_list li:first-child + li {
+    border-top: 0;
 }
 
 ul#export_field_list li + li {
     border-top: 1px solid #e1e1e1;
-    background-color: #f2f2f2;
-}
-
-ul#export_field_list li + li label {
-    color: #A6ACB0;
-    display: inline-block;
+    background-color: #f6f7f7;
 }
 
 ul#export_field_list li + li.ui-sortable-helper {
-    cursor: grabbing;
+    border-top: 1px solid #FFF;
 }
 
 ul#export_field_list li + li.active {
     background-color: #FFF;
+}
+
+ul#export_field_list li + li.active,
+ul#export_field_list li + li.active label {
     cursor: move;
     cursor: grab;
 }
+ul#export_field_list li.active.ui-sortable-helper,
+ul#export_field_list li.active.ui-sortable-helper label {
+    cursor: grabbing;
+}
 
-ul#export_field_list li + li.active label {
-    color: #333;
+
+ul#export_field_list li.active label {
+    color: #50575e;
 }
