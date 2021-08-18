@@ -4,13 +4,13 @@ namespace Apogi\SortExport;
 
 /**
  * Plugin entry point.
- * @since $ver$
+ * @since 1.0.0
  */
 class SortExportPlugin
 {
     /**
      * Registers the required hooks.
-     * @since $ver$
+     * @since 1.0.0
      */
     public function __construct()
     {
@@ -20,7 +20,7 @@ class SortExportPlugin
 
     /**
      * Registers the required javascript.
-     * @since $ver$
+     * @since 1.0.0
      */
     private function load_scripts(): void
     {
@@ -28,21 +28,24 @@ class SortExportPlugin
             return;
         }
 
+        $min = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) || isset($_GET['gform_debug']) ? '' : '.min';
+        $plugin_asset_dir = plugin_dir_url(GF_SORT_EXPORT_PLUGIN_FILE) . 'public/';
+
         wp_enqueue_script(
             'gf-sort-export',
-            plugin_dir_url(GF_SORT_EXPORT_PLUGIN_FILE) . 'public/js/gf-sort-export.jquery.js',
+            $plugin_asset_dir . 'js/gf-sort-export.jquery' . $min . '.js',
             ['jquery', 'jquery-ui-sortable']
         );
 
         wp_enqueue_style(
             'gf-sort-export',
-            plugin_dir_url(GF_SORT_EXPORT_PLUGIN_FILE) . 'public/css/gf-sort-export.css'
+            $plugin_asset_dir . 'css/gf-sort-export' . $min . '.css'
         );
     }
 
     /**
      * Removes hidden (inactive) subfields form the export page.
-     * @since $ver$
+     * @since 1.0.0
      * @param mixed[] $form The form object.
      * @return mixed[] The updated form object.
      */

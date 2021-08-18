@@ -1,6 +1,6 @@
 /**
  * Gravity Forms Sort Export plugin.
- * @since $ver$
+ * @since 1.0.0
  */
 (function ($) {
     /**
