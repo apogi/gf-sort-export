@@ -24,6 +24,6 @@ To prevent clutter, this plugin also removes all disabled subfields from the exp
 1. Simply drag & drop the fields in the desired order.
 
 == Changelog ==
-= Unreleased
+= 1.0.0 - 2021-08-18
 * Feature: Drag & sort the export fields.
 * Feature: Disables all hidden (inactive) subfields from the export list.

@@ -4,10 +4,10 @@
  * Description:     Control the order of the fields during export
  * Author:          Apogi
  * Author URI:      https://paypal.me/doekenorg
- * Plugin URI:      https://apogi.dev/plugins/gf-sort-export
+ * Plugin URI:      https://apogi.dev
  * License:         GPL2
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Version:         0.1.0-alpha
+ * Version:         1.0.0
  */
 
 defined('ABSPATH') or die('No direct access!');
