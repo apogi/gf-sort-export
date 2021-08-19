@@ -1,4 +1,4 @@
-=== Gravity Forms Sort Export ===
+=== Sort Export for Gravity Forms ===
 Contributors: apogi, doekenorg
 Plugin URI: https://apogi.dev/
 Donate link: https://www.paypal.me/doekenorg

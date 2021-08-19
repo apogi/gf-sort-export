@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Gravity Forms Sort Export
+ * Plugin Name:     Sort Export for Gravity Forms
  * Description:     Control the order of the fields during export
  * Author:          Apogi
  * Author URI:      https://paypal.me/doekenorg
