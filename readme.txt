@@ -14,11 +14,11 @@ Control the order of the fields during the export of entries.
 
 == Description ==
 
-This plugin provides the ability to reorder the fields during an export in Gravity Forms. After selecting the fields you
-wish to export, the plugin will group these fields, after which you can drag & drop the in the desired order. Then click
-"Download Export File". The fields in the CSV output will now be in the desired order.
+This plugin provides the ability to reorder the fields during an export in Gravity Forms.
 
-To prevent clutter, this plugin also removes all disabled subfields from the export list.
+After selecting the fields you wish to export, the plugin will group these fields, after which you can drag & drop them in the desired order. Then click "Download Export File". The fields in the CSV output will now be in that order.
+
+To limit visual clutter, this plugin also removes all disabled subfields from the export list.
 
 == Screenshots ==
 1. Simply drag & drop the fields in the desired order.
