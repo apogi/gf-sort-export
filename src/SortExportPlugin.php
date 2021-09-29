@@ -14,15 +14,17 @@ class SortExportPlugin
      */
     public function __construct()
     {
-        add_action('admin_enqueue_scripts', \Closure::fromCallable([$this, 'load_scripts']));
-        add_action('gform_form_export_page', \Closure::fromCallable([$this, 'disable_inactive_subfields']));
+        add_action('admin_enqueue_scripts', \Closure::fromCallable([$this, 'loadScripts']));
+        add_action('gform_form_export_page', \Closure::fromCallable([$this, 'disableInactiveSubfields']));
+        add_action('wp_ajax_gf-sort-export-store-order', \Closure::fromCallable([$this, 'storeOrder']));
+        add_action('wp_ajax_gf-sort-export-get-order', \Closure::fromCallable([$this, 'getOrder']));
     }
 
     /**
      * Registers the required javascript.
      * @since 1.0.0
      */
-    private function load_scripts(): void
+    private function loadScripts(): void
     {
         if (rgget('page') !== 'gf_export' || !in_array(rgget('view'), ['', 'export_entry'], true)) {
             return;
@@ -49,7 +51,7 @@ class SortExportPlugin
      * @param mixed[] $form The form object.
      * @return mixed[] The updated form object.
      */
-    private function disable_inactive_subfields(array $form): array
+    private function disableInactiveSubfields(array $form): array
     {
         foreach ($form['fields'] as $i => $field) {
             if (is_array($field->inputs)) {
@@ -60,5 +62,37 @@ class SortExportPlugin
         }
 
         return $form;
+    }
+
+    /**
+     * Returns the stored order (if any) for a specific form.
+     * @since $ver$
+     */
+    private function getOrder(): void
+    {
+        $option = sprintf('gf-sort-export-order-%d', $_GET['form_id'] ?? 0);
+        wp_send_json(get_option($option, []));
+    }
+
+    /**
+     * Stores the sort order for the provided form.
+     * @since $ver$
+     */
+    private function storeOrder(): void
+    {
+        $allowed_fields = ['form_id', 'order'];
+        $data = array_intersect_key($_POST, array_flip($allowed_fields));
+
+        $form = \GFAPI::get_form($form_id = $data['form_id'] ?? 0);
+        if (!$form) {
+            wp_send_json_error(null, 404);
+
+            return;
+        }
+
+        $option = sprintf('gf-sort-export-order-%d', $form_id);
+        update_option($option, $data['order'] ?: [], false);
+
+        wp_send_json_success();
     }
 }

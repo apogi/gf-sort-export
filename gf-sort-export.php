@@ -21,6 +21,5 @@ if (!defined('GF_SORT_EXPORT_PLUGIN_FILE')) {
 require_once __DIR__ . '/src/SortExportPlugin.php';
 
 add_action('gform_loaded', static function () {
-// start plugin
     new SortExportPlugin();
 });
