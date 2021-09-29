@@ -7,7 +7,7 @@
  * Plugin URI:      https://apogi.dev
  * License:         GPL2
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Version:         1.1.0
+ * Version:         1.0.0
  */
 
 defined('ABSPATH') or die('No direct access!');
