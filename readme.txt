@@ -6,7 +6,7 @@ Tags: apogi, gravity forms, export, csv, sort, order, drag, drop, store
 Requires at least: 4.0
 Requires PHP: 7.1
 Tested up to: 5.8
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ To limit visual clutter, this plugin also removes all disabled subfields from th
 1. Simply drag & drop the fields in the desired order.
 
 == Changelog ==
-= $ver$ - 2021-09-29 =
+= 1.1.0 - 2021-09-29 =
 * Feature: Store the export sort order for every form.
 
 = 1.0.0 - 2021-08-18

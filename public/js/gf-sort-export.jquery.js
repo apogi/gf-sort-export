@@ -30,7 +30,7 @@
 
     /**
      * Stores the current sort order for the form.
-     * @since $ver$
+     * @since 1.1.0
      * @param form_id The form id.
      * @param $list The items list element.
      */
@@ -48,7 +48,7 @@
 
     /**
      * Sorts the list based on the stored order.
-     * @since $ver$
+     * @since 1.1.0
      * @param form_id The form id.
      * @param $list The items list element.
      */

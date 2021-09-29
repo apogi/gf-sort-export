@@ -66,7 +66,7 @@ class SortExportPlugin
 
     /**
      * Returns the stored order (if any) for a specific form.
-     * @since $ver$
+     * @since 1.1.0
      */
     private function getOrder(): void
     {
@@ -76,7 +76,7 @@ class SortExportPlugin
 
     /**
      * Stores the sort order for the provided form.
-     * @since $ver$
+     * @since 1.1.0
      */
     private function storeOrder(): void
     {
