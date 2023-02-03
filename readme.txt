@@ -5,7 +5,7 @@ Donate link: https://www.paypal.me/doekenorg
 Tags: apogi, gravity forms, export, csv, sort, order, drag, drop, store
 Requires at least: 4.0
 Requires PHP: 7.1
-Tested up to: 5.8
+Tested up to: 6.1
 Stable tag: 1.1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
