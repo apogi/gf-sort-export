@@ -2,7 +2,7 @@
 Contributors: apogi, doekenorg
 Plugin URI: https://apogi.dev/
 Donate link: https://www.paypal.me/doekenorg
-Tags: apogi, gravity forms, export, csv, sort, order, drag, drop, store
+Tags: gravity forms, export, sort, order, drag-n-drop
 Requires at least: 4.0
 Requires PHP: 7.1
 Tested up to: 6.6
