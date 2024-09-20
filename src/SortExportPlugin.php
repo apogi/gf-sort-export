@@ -18,6 +18,19 @@ class SortExportPlugin
         add_action('gform_form_export_page', \Closure::fromCallable([$this, 'disableInactiveSubfields']));
         add_action('wp_ajax_gf-sort-export-store-order', \Closure::fromCallable([$this, 'storeOrder']));
         add_action('wp_ajax_gf-sort-export-get-order', \Closure::fromCallable([$this, 'getOrder']));
+        add_action('gform_noconflict_scripts', \Closure::fromCallable([$this, 'registerNoConflictHandles']));
+        add_action('gform_noconflict_styles', \Closure::fromCallable([$this, 'registerNoConflictHandles']));
+    }
+
+    /**
+     * Adds the required handles to the no conflict lists.
+     * @since 1.1.2
+     */
+    private function registerNoConflictHandles(array $handles): array
+    {
+        $handles[] = 'gf-sort-export';
+
+        return $handles;
     }
 
     /**
@@ -26,7 +39,7 @@ class SortExportPlugin
      */
     private function loadScripts(): void
     {
-        if (rgget('page') !== 'gf_export' || !in_array(rgget('view'), ['', 'export_entry'], true)) {
+        if (rgget('page') !== 'gf_export' || !in_array(rgget('subview'), ['', 'export_entry'], true)) {
             return;
         }
 

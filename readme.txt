@@ -6,7 +6,7 @@ Tags: gravity forms, export, sort, order, drag-n-drop
 Requires at least: 4.0
 Requires PHP: 7.1
 Tested up to: 6.6
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,9 @@ To limit visual clutter, this plugin also removes all disabled subfields from th
 1. Simply drag & drop the fields in the desired order.
 
 == Changelog ==
+
+= 1.1.2 - 2024-09-20
+* Fixed: Allow script and styles on Gravity Forms No Conflict mode.
 
 = 1.1.1 - 2024-08-22 =
 * Changed: Replaced deprecated DomEvents with MutationObserver.
