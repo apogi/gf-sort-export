@@ -22,6 +22,10 @@ The provided sort order is also persisted for every form. So you don't have to r
 
 To limit visual clutter, this plugin also removes all disabled subfields from the export list.
 
+## More Apogi Add-ons
+
+- **[MailPoet for Gravity Forms](https://apogi.dev/mailpoet-for-gravity-forms):** Adds a MailPoet subscription field to the form editor to seamlessly integrate MailPoet with Gravity Forms. Subscribe, unsubscribe, connect custom fields, bulk subscribe through bulk actions and have subscriber insights inside your entry details. This add-on does it all.
+
 == Screenshots ==
 1. Simply drag & drop the fields in the desired order.
 
