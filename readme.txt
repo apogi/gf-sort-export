@@ -5,7 +5,7 @@ Donate link: https://www.paypal.me/doekenorg
 Tags: gravity forms, export, sort, order, drag-n-drop
 Requires at least: 4.0
 Requires PHP: 7.1
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 1.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
